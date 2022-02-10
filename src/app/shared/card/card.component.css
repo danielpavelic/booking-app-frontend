@@ -1,0 +1,35 @@
+.card-item--holder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.card-item--header {
+    padding: 10px;
+}
+
+.card-item--content {
+    padding: 0px 10px;
+}
+
+
+.card-item--content p {
+    font-size: 14px;
+    color: #444;
+}
+
+.card-item--footer {
+    padding: 10px;
+}
+.card-item--footer .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: blue;
+    color: #fff;
+    border: 0px;
+}

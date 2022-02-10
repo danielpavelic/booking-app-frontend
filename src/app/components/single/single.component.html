@@ -1,0 +1,11 @@
+<app-section-title 
+    *ngIf="(room$ | async) as room"
+    [title]="room?.name + ' Availability'" 
+    [subtitle]="'Room: ' + room?.name + ' | Ref: ' + room.ref">
+</app-section-title>
+
+<ejs-schedule
+    #schedule
+    [eventSettings]="eventSettings"
+    (actionComplete)="onActionComplete($event)"
+></ejs-schedule>

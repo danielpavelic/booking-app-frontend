@@ -1,0 +1,15 @@
+<div class="header-component--holder">
+    <div class="header-component--container">
+        <div class="p10">
+            <h1><a routerLink="/" title="Room Booking Homepage">CP Room Booking</a></h1>
+            <small>Room Booking System for CocaCola & Pepsi</small>
+        </div>
+    </div>
+    <div class="header-component--container">
+        <div class="header-menu--container">
+            <div 
+                *ngIf="user"
+                class="p10">{{ user?.email }}</div>
+        </div> 
+    </div>
+</div>

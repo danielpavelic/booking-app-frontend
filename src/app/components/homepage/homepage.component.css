@@ -1,0 +1,41 @@
+.login-component--holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.login-item--wrapper {
+    padding: 60px 90px;
+    background: #ededed;
+    border-radius: 8px;
+}
+
+ul.login-component--wrapper {
+    display: flex;
+}
+ul.login-component--wrapper li {
+    flex: 1 0 0;
+    width: 50%;
+    border-right: 1px solid #ccc;
+    padding: 30px;
+}
+ul.login-component--wrapper li:last-child { border: 0px }
+
+ul.login-component--wrapper li button {
+    width: 260px;
+    height: 260px;
+    display: block;
+    text-indent: -99999px;
+}
+button.pepsi {
+    background: url('../../../assets/logo-pepsi.png') no-repeat center center;
+    filter: grayscale(100%);
+}
+button.cocacola {
+    background: url('../../../assets/logo-coca-cola.png') no-repeat center center;
+    filter: grayscale(100%);
+}
+button.pepsi:hover,
+button.cocacola:hover {
+    filter: grayscale(0%);
+}

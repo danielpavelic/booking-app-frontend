@@ -1,0 +1,10 @@
+.cards-component--holder {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards-component--item {
+    flex: 1 1 25%;
+    
+    height: 200px;
+    border: 1px solid #ddd;
+} 

@@ -1,0 +1,42 @@
+.app-wrapper--holder {
+    display: flex;
+    margin: auto -1rem 1rem;
+    height: 100%;
+}
+
+.app-sidebar--holder {
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+.app-content--holder {
+    flex: 3;
+}
+
+ul.booking-list--holder li {
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+}
+ul.booking-list--holder li:last-child { border: 0px; }
+ul.booking-list--holder li h2 {
+    padding-bottom: 15px;
+}
+ul.booking-list--holder li dl {
+    background: #eee;
+    display: block;
+}
+
+ul.booking-list--holder li dl dt,
+ul.booking-list--holder li dl dd {
+    padding: 15px;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+ul.booking-list--holder li button {
+    padding: 15px 25px;
+    background: #f20000;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.empty { color: #ccc; }

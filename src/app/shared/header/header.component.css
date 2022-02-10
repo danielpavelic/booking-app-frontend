@@ -1,0 +1,17 @@
+.header-component--holder {
+    display: flex;
+    border: 1px solid #ccc;
+}
+.header-component--container {
+    flex: 1;
+}
+
+.header-component--container .header-menu--container {
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header-component--container .header-menu--container a {
+    padding: 10px;
+}

@@ -1,0 +1,7 @@
+<ul class="sidebar-menu--holder">
+    <li *ngFor="let menuItem of menuItems">
+        <a
+            [routerLink]="menuItem.path" 
+            [title]="menuItem.title">{{ menuItem.title }}</a>
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+<div class="login-component--holder">
+    <div class="login-item--wrapper">
+        <ul class="login-component--wrapper">
+            <!-- <li *ngFor="let user of (users$ | async)"><a 
+                [routerLink]="['/dashboard', user._id]"
+                [title]="user.name"
+                [class]="formatCssClass(user.name)">{{ user.name }}</a></li> -->
+            <li *ngFor="let user of (users$ | async)">
+                <button
+                    (click)="onSetActiveUser(user._id)"
+                    [class]="formatCssClass(user.name)">{{ user.name }}</button></li>
+        </ul>
+    </div>
+</div>
+

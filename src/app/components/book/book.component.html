@@ -1,0 +1,67 @@
+<app-section-title 
+    [title]="'Book a Room'" 
+    [subtitle]="'Please use form below to book a room.'"></app-section-title>
+
+<form 
+    [formGroup]="bookingForm"
+    (ngSubmit)="bookingForm.valid && onFormSubmit(bookingForm.value)"
+    class="booking-form--holder">
+
+
+    <div class="form-control--wrapper">
+        <h4>Select Room</h4>
+        <mat-form-field>
+            <mat-label>Select room</mat-label>
+            <mat-select formControlName="room">
+                <mat-option 
+                    *ngFor="let room of (rooms$ | async); index as i" 
+                    [value]="room">
+                    {{ (i + 1)  + '. ' + room.name + ' (' + room.ref + ')' }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="form-control--wrapper">
+        <h4>Select Date range</h4>
+        <mat-form-field class="pr10">
+            <input 
+                matInput 
+                [ngxMatDatetimePicker]="pickerFrom" 
+                placeholder="From date & time"
+                formControlName="start">
+            <mat-datepicker-toggle 
+                matSuffix 
+                [for]="$any(pickerFrom)"></mat-datepicker-toggle>
+            <ngx-mat-datetime-picker 
+                #pickerFrom></ngx-mat-datetime-picker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input 
+                matInput 
+                [ngxMatDatetimePicker]="pickerTo" 
+                placeholder="To date & time" 
+                formControlName="end"
+                [min]="">
+            <mat-datepicker-toggle 
+                matSuffix 
+                [for]="$any(pickerTo)"></mat-datepicker-toggle>
+            <ngx-mat-datetime-picker 
+                #pickerTo></ngx-mat-datetime-picker>
+        </mat-form-field>
+    </div>
+
+    <div 
+        class="form-control--wrapper" 
+        *ngIf="user">
+        <h4>Booking for user: <span>{{ user.email }}</span></h4>        
+    </div>
+
+    <div class="form-control--wrapper nob">
+        <button
+            type="submit"
+            mat-raised-button 
+            color="primary">Book the Room</button>
+    </div>
+</form>

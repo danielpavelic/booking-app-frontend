@@ -1,0 +1,25 @@
+c
+
+<ng-template [ngIf]="(mybooking$ | async)?.length !== 0 " [ngIfElse]="noBookingsMessage">
+<ul class="booking-list--holder">
+    <li 
+        *ngFor="let booking of (mybooking$ | async); index as i">
+        <h2>Booking #{{ booking._id }}</h2>
+        <dl>
+            <dt>Ref: #{{ booking.room?.ref }}</dt>
+            <dd>Room: {{ booking.room?.name }}</dd>
+            <dd>For: {{ booking.user?.name }} ({{ booking.user?.email }})</dd>
+            <dd>Time: {{booking?.start | date:'short':'UTC' }} - {{booking?.end | date:'short':'UTC' }}</dd>
+            <dd><button 
+                type="button" 
+                (click)="onBookingCancel(booking._id)">Cancel booking</button></dd>
+        </dl>
+    </li>
+</ul>
+</ng-template>
+
+<ng-template #noBookingsMessage>
+    <ul class="booking-list--holder empty">
+        <li><h2>No Bookings found</h2></li>
+    </ul>
+</ng-template>

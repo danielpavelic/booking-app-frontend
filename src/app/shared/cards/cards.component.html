@@ -1,0 +1,12 @@
+<div class="cards-component--holder">
+    <div class="cards-component--item" *ngFor="let room of (rooms$ | async)">
+        <a [routerLink]="['room', room._id]" [title]="room.name">
+            <app-card
+                [id]="room._id"
+                [title]="room.name"
+                [desc]="room.ref"
+            ></app-card>
+        </a>
+    </div>
+
+</div>

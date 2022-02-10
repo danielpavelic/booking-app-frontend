@@ -1,0 +1,12 @@
+ul.sidebar-menu--holder {
+    height: 100%;
+}
+
+ul.sidebar-menu--holder li {
+    border-bottom: 1px solid #ddd;
+}
+
+ul.sidebar-menu--holder li a { 
+    display: block;
+    padding: 10px 20px;
+}
